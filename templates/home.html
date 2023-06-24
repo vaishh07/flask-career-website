@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <title>Home</title>
+  <style>
+    h1{
+    font-size:60px;
+    font-family:Roboto;
+    font-weight:normal;
+    text-align: center;
+    color: rgb(108, 100, 100);  
+    }
+    #banner{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+    }
+    h2{
+    font-size:40px;
+    font-family:Roboto;
+    font-weight:normal;
+    text-align: center;
+    color: rgb(108, 100, 100);
+    }
+    .bodytext{
+      font: family Roboto;
+      color: rgb(80, 80, 80);
+      
+    }
+    #container{
+      max-width : 720px;
+      margin:0px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1 class="text-center">JOVIAN CAREERS</h1>
+  <img id="banner" class="img-fluid " src="https://img.freepik.com/free-photo/abstract-blur-hotel-interior_1203-8529.jpg?w=826&t=st=1687614918~exp=1687615518~hmac=184d94836e8321f63493d584f3452fefe304fa244bf0f9e7cbce541d494ff226" height="320" alt="image">
+  <h2 class="text-center" >About Jovian</h2>
+  <p class =" bodytext" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut maximus purus id est dignissim consequat. Fusce lacinia, erat id viverra rhoncus, sapien nisl feugiat sapien, non laoreet mauris nunc fermentum orci. Quisque condimentum tellus augue, sed faucibus odio elementum auctor. Donec lobortis elit lacinia urna lobortis, nec viverra nulla dapibus. Curabitur ut eros at justo posuere porta. Vestibulum faucibus eleifend faucibus. 
+</p>
+    
+<h2>Open Positions </h2> 
+<div > 
+<p class="bodytext" class="text-center">
+ 
+    {% for job in jobs %}
+    <div>
+      <h4>{{job['title']}}</h4>
+    </div>
+    <div>
+      <b>Location : </b>
+      {{job['location']}}
+    </div>
+
+  
+    
+    <button type="button" class="btn btn-outline-primary" >Apply
+    </button>
+
+  
+  {% endfor %}
+  </p>
+</div>
+<!-- <div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Data Analyst</h5>
+    <p class="card-text">Bengaluru,India</p>
+    <a href="#" class="btn btn-primary">Apply</a>
+  </div>
+</div>
+
+<div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Data Analyst</h5>
+    <p class="card-text">Bengaluru,India</p>
+    <a href="#" class="btn btn-primary">Apply</a>
+  </div>
+</div>
+  <div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Business Analyst</h5>
+    <p class="card-text">Mumbai,India</p>
+    <a href="#" class="btn btn-primary">Apply</a>
+  </div>
+</div>
+  <div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Data Scientist</h5>
+    <p class="card-text">Pune,India</p>
+    <a href="#" class="btn btn-primary">Apply</a>
+  </div>
+</div> -->
+  
+
+  <div class="text-center">
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+    <p class="mt-4">Copyright@2023</p>
+  </div>
+</div>
+</body>
+</html>
