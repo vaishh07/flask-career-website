@@ -46,29 +46,25 @@
   <h2 class="text-center" >About Jovian</h2>
   <p class =" bodytext" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut maximus purus id est dignissim consequat. Fusce lacinia, erat id viverra rhoncus, sapien nisl feugiat sapien, non laoreet mauris nunc fermentum orci. Quisque condimentum tellus augue, sed faucibus odio elementum auctor. Donec lobortis elit lacinia urna lobortis, nec viverra nulla dapibus. Curabitur ut eros at justo posuere porta. Vestibulum faucibus eleifend faucibus. 
 </p>
-    
-<h2>Open Positions </h2> 
-<div > 
-<p class="bodytext" class="text-center">
- 
-    {% for job in jobs %}
-    <div>
-      <h4>{{job['title']}}</h4>
-    </div>
-    <div>
-      <b>Location : </b>
-      {{job['location']}}
-    </div>
+<div>
+<h2 class="text-center mt-2 mb-4">Open Positions </h2> 
+<div> 
 
-  
-    
-    <button type="button" class="btn btn-outline-primary" >Apply
-    </button>
-
-  
-  {% endfor %}
-  </p>
+   {% for job in jobs %}
+      {% include 'jobitems.html' %}
+   {% endfor %}
 </div>
+    
+    
+   
+</div>
+    <div class="text-center">
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+    <p class="mt-4">Copyright@2023</p>
+  </div>
+</div>
+</body>
+</html>
 <!-- <div class="card w-75 mb-3">
   <div class="card-body">
     <h5 class="card-title">Data Analyst</h5>
@@ -100,10 +96,3 @@
 </div> -->
   
 
-  <div class="text-center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
-    <p class="mt-4">Copyright@2023</p>
-  </div>
-</div>
-</body>
-</html>
